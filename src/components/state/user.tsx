@@ -5,7 +5,7 @@ type AuthUser = {
   email: string;
 };
 
-export default function User() {
+export default function UserP() {
   const [user, setUser] = useState<AuthUser | null>(null);
   const handleLoggedIn = () => {
     setUser({
@@ -18,12 +18,13 @@ export default function User() {
   }
 
   return (
-    <div className="flex justify-center items-center User">
+    <div className="flex justify-center items-center  flex-col">
       <div className="flex justify-center items-center gap-5">
         <button onClick={handleLoggedIn}> Log In </button>
         <button onClick={handleLoggedOut}> Log Out </button>
       </div>
-      <h2>{user?.name}</h2>
+      <h2>Name: {user?.name}</h2>
+      <small>Email: {user?.email}</small>
     </div>
   );
 }

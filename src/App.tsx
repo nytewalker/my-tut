@@ -1,11 +1,14 @@
 import React from "react";
+// import UserP from "./components/state/user";
+// import SaySomething from "./components/state/SaySomething";
 // import { LoggedIn } from "./components/state/LoggedIn";
-import { User } from "./components/contexts/User";
+
 
 const App = () => {
   return (
-    <div className="flex text-center">
-      <User/>
+    <div className="flex text-center justify-center items-center gap-2">
+      {/* <UserP/> */}
+      {/* <SaySomething/> */}
     </div>
   );
 };
