@@ -1,14 +1,19 @@
 import React from "react";
-// import UserP from "./components/state/user";
-// import SaySomething from "./components/state/SaySomething";
-// import { LoggedIn } from "./components/state/LoggedIn";
+import { UserContextProvider } from "./components/contexts/UserContext";
+import { User } from "./components/contexts/User";
 
 
 const App = () => {
   return (
-    <div className="flex text-center justify-center items-center gap-2">
-      {/* <UserP/> */}
-      {/* <SaySomething/> */}
+    <div className="bg-green-400 flex flex-col text-center justify-center items-center gap-2 h-full">
+      <h1 className="text-2xl text-white p-3">
+        useContext~practice
+      </h1>
+      <div>
+        <UserContextProvider>
+          <User/>
+        </UserContextProvider>
+      </div>
     </div>
   );
 };
