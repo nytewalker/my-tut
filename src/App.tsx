@@ -4,11 +4,7 @@ import { User } from "./components/contexts/User";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-2xl p-4 text-white font-mono bg-slate-400 text-center ">
-        Welcome to fedora react-typescript lessons
-      </h1>
-      {/* <LoggedIn /> */}
+    <div className="flex text-center">
       <User/>
     </div>
   );
