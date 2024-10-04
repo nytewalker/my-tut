@@ -7,25 +7,23 @@ type AuthUser = {
 
 export default function User() {
   const [user, setUser] = useState<AuthUser | null>(null);
-  const handleLogIn = () => {
+  const handleLoggedIn = () => {
     setUser({
       name: "nytewalker",
       email: "iam9itewalker@gmail.com",
     });
   };
-  const handleLogOut = () => {
+  const handleLoggedOut = () => {
     setUser(null);
-  };
+  }
 
   return (
-    <div>
+    <div className="flex justify-center items-center User">
       <div className="flex justify-center items-center gap-5">
-        <button onClick={handleLogIn}> Log In </button>
-        <button onClick={handleLogOut}> Log Out </button>
+        <button onClick={handleLoggedIn}> Log In </button>
+        <button onClick={handleLoggedOut}> Log Out </button>
       </div>
-      <p>
-        Name{user?.name}
-      </p>
+      <h2>{user?.name}</h2>
     </div>
   );
-};
+}
